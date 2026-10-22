@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The REB Framework | Norman Koh · Singapore Property</title>
+    <meta
+      name="description"
+      content="The 5-stage Real Estate Blueprint Norman Koh runs on every property he recommends, including his own $5M+ portfolio. Free PDF + REB Scorecard."
+    >
+    <link rel="stylesheet" href="/REB/styles.css">
+    <!-- Cloudflare Turnstile (invisible bot challenge). Loads the widget script. -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  </head>
+  <body>
+    <main class="page">
+
+      <!-- 1. HERO + above-fold form -->
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow">Free / Singapore Property Framework</span>
+            <h1>The REB Framework: 7 Questions Smart Buyers Ask Before Every Property Decision in Singapore.</h1>
+            <p class="hero-subtitle">
+              Start with the exit. Know who buys it from you, and at what floor price, before you sign. It's the 5-stage method I run on every property I recommend, and on my own $5M+ portfolio.
+            </p>
+            <ul class="hero-bullets">
+              <li>15 years of SG market memory, since 2010.</li>
+              <li>$500M+ in transactions; principal consultant at Stacked Homes.</li>
+              <li>Same framework I use for my own family's properties.</li>
+            </ul>
+          </div>
+
+          <aside class="hero-form-panel" id="download">
+            <p class="form-eyebrow">Free download</p>
+            <h2 class="form-heading">Send me the framework.</h2>
+            <p class="form-lead">
+              Enter your details and you'll get the REB Framework PDF + REB Scorecard within 60 seconds.
+            </p>
+
+            <!-- LIVE FORM: posts to /api/lead (anti-bot + geo gate) → GHL webhook. Do NOT replace with a GHL iframe embed — that bypasses the bot/geo protection. -->
+            <!-- GHL thank-you redirect should point to thank-you.html or the hosted equivalent. -->
+            <form action="thank-you.html" method="get" class="hero-form" data-lead-form novalidate>
+              <div class="field">
+                <label for="hero-first-name">First name</label>
+                <input id="hero-first-name" name="first_name" type="text" autocomplete="given-name" required>
+              </div>
+              <div class="field">
+                <label for="hero-email">Email</label>
+                <input id="hero-email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="hero-phone">Phone (for the 48h REB Score on WhatsApp)</label>
+                <input id="hero-phone" name="phone" type="tel" autocomplete="tel" required>
+              </div>
+              <!-- Honeypot: hidden from humans; bots that fill it are rejected server-side. -->
+              <div class="hp-field" aria-hidden="true">
+                <label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+              </div>
+              <!-- Cloudflare Turnstile widget. Replace TURNSTILE_SITEKEY with the real sitekey before publish. -->
+              <div class="cf-turnstile" data-sitekey="TURNSTILE_SITEKEY" data-placeholder="TURNSTILE_SITEKEY" data-size="flexible"></div>
+              <button class="button primary full-width" type="submit">Send me the framework</button>
+              <div class="form-error">Pop in your name, a valid email, and a Singapore or Malaysia mobile.</div>
+              <p class="privacy-note">
+                Delivered within 60 seconds. Unsubscribe anytime.
+              </p>
+              <!-- Lead recovery: hidden until a submit actually fails, then revealed
+                   by showFallback() in form.js. Restored 2026-09-03 — it had been
+                   removed by mistake (the "troubleshoot" link Collen meant was
+                   Cloudflare Turnstile's error state, not this). Without it a broken
+                   form is a dead end and the lead is lost. -->
+              <div class="form-fallback" hidden>
+                Something didn't go through.
+                <a href="https://wa.me/65XXXXXXXX?text=Hi%20Norman%2C%20I%20tried%20to%20download%20the%20REB%20Framework%20but%20the%20form%20didn%27t%20go%20through.%20Could%20you%20send%20it%20to%20me%20directly%3F" data-placeholder="WHATSAPP_URL">Message me on WhatsApp</a>
+                and I'll send it to you directly.
+              </div>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 2. The 7 questions tease -->
+      <section class="section tight">
+        <div class="section-title">
+          <p class="section-kicker">What's inside</p>
+          <h2>The 7 questions. Each scores /10. Total = your REB score /70.</h2>
+          <p class="lead">
+            Every property I evaluate, for a client or for my own portfolio, goes through these seven questions. No shortcuts. No gut feelings.
+          </p>
+        </div>
+        <div class="questions-grid">
+          <article class="question-tile">
+            <span class="question-num"><span class="qn">01</span>Market Direction</span>
+            <h3>Where is Singapore in its cycle, and does the pipeline support prices here?</h3>
+            <p class="question-answers">Cooling measures, GLS, construction TOPs over your holding period.</p>
+          </article>
+          <article class="question-tile">
+            <span class="question-num"><span class="qn">02</span>Financial Readiness</span>
+            <h3>Does this purchase strengthen your position, or are you stretching?</h3>
+            <p class="question-answers">TDSR, LTV, opportunity cost: the math, not the feeling.</p>
+          </article>
+          <article class="question-tile">
+            <span class="question-num"><span class="qn">03</span>New Launch vs Resale vs Sub-Sale</span>
+            <h3>Which purchase type actually fits your timeline and cash position?</h3>
+            <p class="question-answers">No "best" option. Only the best for you.</p>
+          </article>
+          <article class="question-tile">
+            <span class="question-num"><span class="qn">04</span>Development Quality</span>
+            <h3>Strip the brochure. What are the hard attributes that matter in 10 years?</h3>
+            <p class="question-answers">MRT, schools, stack, layout, ventilation, noise.</p>
+          </article>
+          <article class="question-tile">
+            <span class="question-num"><span class="qn">05</span>Pricing Justification</span>
+            <h3>Can you defend every dollar of premium against the next-best alternative?</h3>
+            <p class="question-answers">URA REALIS comps, quantum gaps, PSF vs the project next door.</p>
+          </article>
+          <article class="question-tile">
+            <span class="question-num"><span class="qn">06</span>Floor and View Premium</span>
+            <h3>Is the floor premium real, or is it the developer's markup?</h3>
+            <p class="question-answers">Developer per-floor pricing vs resale recognition.</p>
+          </article>
+          <article class="question-tile">
+            <span class="question-num"><span class="qn">07</span>Timing</span>
+            <h3>Does buying now position you to benefit, or is the cycle already past?</h3>
+            <p class="question-answers">Construction pipeline, area transformation, holding period.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. Why most buyers get this wrong -->
+      <section class="band">
+        <div class="section">
+          <div class="section-title">
+            <p class="section-kicker">Why most buyers get this wrong</p>
+            <h2>The three traps I see Singapore buyers fall into, and what each one quietly costs.</h2>
+          </div>
+          <div class="prose" style="margin: 0 0 clamp(28px, 4vw, 44px);">
+            <p>
+              You're doing the sensible things. Reading the launch reviews. Visiting the showflats.
+              Asking friends who bought recently. And you still don't feel confident, because the
+              information you're collecting is entry information.
+            </p>
+            <p>
+              The expensive part of a property decision lives at the other end: <strong>who buys it
+              from you, at what price, and how many of them are standing there when you need to
+              sell.</strong> <span class="em-red">That's the part I check first</span>, and it's the
+              part the brochure never mentions.
+            </p>
+            <p>
+              Two rules drive it. A <strong>support price</strong>: ask 100 owners if they'll sell
+              below what they paid, and around 90 won't, so there's a floor under the market. And an
+              <strong>exit pool</strong>: the number of buyers actually waiting for your unit on the
+              day you sell. Count both before you fall for the showflat.
+            </p>
+          </div>
+          <div class="problem-grid">
+            <article class="card">
+              <span class="card-num">01 / Hype-Led</span>
+              <h3>Buying because the showflat felt good.</h3>
+              <p>The showflat is doing its job. The brochure is doing its job. Neither is doing yours.</p>
+              <p class="card-consequence">
+                <strong>What it costs:</strong> a $200K premium for a "sea view" that turns out to be a sliver between two buildings.
+              </p>
+            </article>
+            <article class="card">
+              <span class="card-num">02 / Brochure-Driven</span>
+              <h3>Trusting "convenient location, world-class facilities" without checking the data.</h3>
+              <p>Every brochure says this. The URA pipeline, the transacted PSF, and the floor premium tell the real story.</p>
+              <p class="card-consequence">
+                <strong>What it costs:</strong> overpaying on the developer's markup that the resale market never returns.
+              </p>
+            </article>
+            <article class="card">
+              <span class="card-num">03 / No Exit Math</span>
+              <h3>Buying without knowing how you'll sell.</h3>
+              <p>Most agents start with the entry. I start with the exit. Know the exit, or you don't know the deal.</p>
+              <p class="card-consequence">
+                <strong>What it costs:</strong> a property that's the right unit at the wrong time, locked up for 7 years waiting on a buyer.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. REB Framework explained — 5 stages -->
+      <section class="section">
+        <div class="section-title">
+          <p class="section-kicker">How the REB Framework works</p>
+          <h2>Five stages. One decision. The Real Estate Blueprint runs end-to-end.</h2>
+          <p class="lead">
+            Most agents pitch a project. The REB Framework gives you a decision system you can run on any property, including the ones I'd tell you to walk away from.
+          </p>
+        </div>
+        <div class="reb-strip">
+          <article class="reb-stage">
+            <span class="reb-stage-num">01</span>
+            <h3>Discover</h3>
+            <p>Life stage, goals, constraints. Before any listing.</p>
+          </article>
+          <article class="reb-stage">
+            <span class="reb-stage-num">02</span>
+            <h3>Market</h3>
+            <p>URA data, transaction trends, development benchmarks.</p>
+          </article>
+          <article class="reb-stage">
+            <span class="reb-stage-num">03</span>
+            <h3>Shortlist</h3>
+            <p>Right-pricing methodology, filter to 2–3 real candidates.</p>
+          </article>
+          <article class="reb-stage">
+            <span class="reb-stage-num">04</span>
+            <h3>Unit</h3>
+            <p>Stack, facing, layout, long-term resale profile.</p>
+          </article>
+          <article class="reb-stage">
+            <span class="reb-stage-num">05</span>
+            <h3>Exit</h3>
+            <p>Start with the end. Know the exit before the entry.</p>
+          </article>
+        </div>
+        <p class="reb-strip-caption">
+          The output is a single number out of 70. <span class="mono">The REB Score.</span>
+        </p>
+      </section>
+
+      <!-- 5. NORMAN RATING signature band (the visual hero) -->
+      <section class="rating-band">
+        <div class="rating-band-inner">
+          <div>
+            <span class="rating-numeral">50/70</span>
+            <span class="rating-numeral-sub">Minimum to Recommend</span>
+          </div>
+          <div>
+            <p class="section-kicker">The REB Score</p>
+            <h2>I do not recommend anything that does not score at least 50 out of 70.</h2>
+            <p class="lead">
+              A property that scores well across all seven questions is rare. That is the point. Most properties are average. Some are good. A few are exceptional.
+            </p>
+            <p class="rating-band-quote">
+              The difference between average and exceptional, over a 10-year hold on a $2M purchase, is easily $300K to $500K. That's your next upgrade. Or your retirement timeline moved up five years.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Meet Norman -->
+      <section class="section">
+        <div class="meet-norman-head">
+          <div class="mn-heading">
+            <p class="section-kicker">About Norman</p>
+            <h2>The person reading your shortlist has his own money in this market.</h2>
+          </div>
+          <div class="mn-photo">
+            <div class="norman-portrait">
+            <!-- Headshot supplied 2026-09-02. Source 1445x1709; CSS crops to 4:5
+            and applies grayscale + contrast, which renders the PropNex
+            jacket near-black. Swap the file in place to change it. -->
+            <img
+            src="/REB/assets/norman-headshot.jpg"
+            alt="Norman Koh, PropNex Realty"
+            class="norman-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="norman-photo-fallback" aria-hidden="true">
+            <span>NORMAN HEADSHOT</span>
+            <small>Drop assets/norman-headshot.jpg or replace src</small>
+            </div>
+            </div>
+            <p class="norman-portrait-caption">
+            Norman Koh &middot; PropNex Realty
+            </p>
+          </div>
+        </div>
+
+        <div class="meet-norman-body">
+          <p class="lead">
+          I came from real financial hardship growing up. That's why I don't sell hype. I sell clarity. Every recommendation I make is one I would make with my own money, because I have made those recommendations with my own money.
+          </p>
+          <ul class="meet-norman-bullets">
+          <li>
+          <strong>Practice what I preach.</strong>
+          <span>Personal portfolio of $5M+ in Singapore property. Built using the same REB Framework I run for clients.</span>
+          </li>
+          <li>
+          <strong>$500M+ transacted across 15 years.</strong>
+          <span>Since 2010. Pattern recognition built one deal at a time.</span>
+          </li>
+          <li>
+          <strong>Helped clients generate six- to seven-figure capital gains.</strong>
+          <span>The framework's job is the exit. Done right, that is where the gain shows up.</span>
+          </li>
+          <li>
+          <strong>Principal consultant at Stacked Homes.</strong>
+          <span>Consulting on the property articles Singapore actually reads, twice a week. Plus a 30+ agent team trained on this exact framework.</span>
+          </li>
+          <li>
+          <strong>The agent who says no.</strong>
+          <span>If a property scores below 50/70, I'll tell you that, even if it costs me the sale.</span>
+          </li>
+          </ul>
+          <blockquote class="norman-quote">
+          "I came from real financial hardship. That's why I don't sell hype. I sell clarity."
+          <cite>Norman Koh</cite>
+          </blockquote>
+          <div class="journey">
+          <div class="journey-step"><span class="js-stage">2010 &middot; The start</span><span class="js-name">$52K in 25 months</span><span class="js-detail">First two years: barely surviving on NS savings and personal-training income. Nearly quit.</span><span class="js-gain">The why questions started here</span></div>
+          <div class="journey-step"><span class="js-stage">Aug 2012 &middot; Tanjong Rhu</span><span class="js-name">7 deals in 7 weeks</span><span class="js-detail">Focused on one area I genuinely knew, studied every transaction: $86K in 2.5 months.</span><span class="js-gain">Data beat hustle</span></div>
+          <div class="journey-step"><span class="js-stage">15 years on</span><span class="js-name">$500M+ transacted</span><span class="js-detail">One of the chiefs-in-charge of the PropNex Luxury team. Principal consultant at Stacked Homes.</span><span class="js-gain">Full life-cycle service</span></div>
+          <div class="journey-step"><span class="js-stage">My own money</span><span class="js-name">$5M+ portfolio</span><span class="js-detail">Built with the same 7 questions in this framework, on my own purchases.</span><span class="js-gain">Practice what I preach</span></div>
+          </div>
+        </div></section>
+
+      <!-- 6b. Most agents vs the REB approach -->
+      <section class="section narrow">
+        <div class="section-title">
+          <p class="section-kicker">What sets this apart</p>
+          <h2>Most agents start with the entry. The REB Framework starts with the exit.</h2>
+        </div>
+        <div class="fit-grid">
+          <div class="fit-col no">
+            <p class="fit-label">&times; Most agents</p>
+            <ul>
+              <li>Pitch the project of the month</li>
+              <li>Sell the showflat feeling and the launch incentives</li>
+              <li>Talk entry price, never exit price</li>
+              <li>Have no repeatable process you can inspect</li>
+              <li>End the relationship at the handover</li>
+            </ul>
+          </div>
+          <div class="fit-col yes">
+            <p class="fit-label">&rarr; The REB Framework</p>
+            <ul>
+              <li>Seven questions, scored, on every property. No shortcuts, no gut feelings</li>
+              <li>Your exit buyer counted before your entry price is discussed</li>
+              <li>Every dollar of premium defended with transaction data, or not paid</li>
+              <li>A walk-away built in: below 50/70, the answer is no</li>
+              <li>The same framework Norman runs on his own portfolio</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Proof stat strip -->
+      <section class="section tight">
+        <div class="proof-strip">
+          <div class="stat-tile">
+            <span class="stat-num">$500M+</span>
+            <span class="stat-label">Transacted across 15 years</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-num">15 yrs</span>
+            <span class="stat-label">Singapore market memory</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-num">30+</span>
+            <span class="stat-label">Agents trained on this framework weekly</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-num">$5M+</span>
+            <span class="stat-label">Personal portfolio, same framework</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. What you get -->
+      <section class="section">
+        <div class="section-title">
+          <p class="section-kicker">What you get</p>
+          <h2>One PDF. One scorecard. One free REB Score on a property of your choice.</h2>
+        </div>
+        <!-- ==========================================================
+             MOCKUP — stand-in for the real PDF cover and scorecard.
+             Built in CSS rather than as an image so it stays sharp at any
+             size and uses the page's own typefaces. The scorecard rows are
+             deliberately BLANK: it is an unfilled worksheet, not a completed
+             score for a real property.
+             REPLACE with an export or photograph of the real PDF once it
+             exists. Depends on the /70 scale being confirmed (open q6/q7).
+             ========================================================== -->
+        <div class="artifact-duo" aria-hidden="true">
+          <figure class="artifact artifact-cover">
+            <span class="ac-label">Free PDF / 7 chapters</span>
+            <p class="ac-title">The REB Framework</p>
+            <p class="ac-sub">7 questions smart buyers ask before every property decision in Singapore</p>
+            <span class="ac-by">Norman Koh &middot; PropNex Realty</span>
+          </figure>
+
+          <figure class="artifact artifact-sheet">
+            <span class="as-label">The REB Scorecard</span>
+            <ul class="as-rows">
+              <li><span>01 &nbsp;Market direction</span><i></i></li>
+              <li><span>02 &nbsp;Financial fit</span><i></i></li>
+              <li><span>03 &nbsp;Purchase type</span><i></i></li>
+              <li><span>04 &nbsp;Development</span><i></i></li>
+              <li><span>05 &nbsp;Pricing</span><i></i></li>
+              <li><span>06 &nbsp;Floor and view</span><i></i></li>
+              <li><span>07 &nbsp;Timing</span><i></i></li>
+            </ul>
+            <div class="as-total"><span>REB Score</span><strong>/70</strong></div>
+          </figure>
+        </div>
+
+        <div class="get-grid">
+          <article class="get-item">
+            <span class="get-item-tag">PDF / 7 chapters</span>
+            <h3>The REB Framework explained, chapter by chapter.</h3>
+            <p>One chapter per question. SG-specific policy detail. The full REB score methodology.</p>
+          </article>
+          <article class="get-item">
+            <span class="get-item-tag">Worksheet</span>
+            <h3>The REB Scorecard.</h3>
+            <p>Score your next property /70 across the 7 questions. Walk into a showflat with a tool, not a vibe.</p>
+          </article>
+          <article class="get-item">
+            <span class="get-item-tag">Free / 48h turnaround</span>
+            <h3>One REB Score on a property of your choice.</h3>
+            <p>Send me a URL on WhatsApp. I'll run the REB score in 48 hours. Free. No consultation required.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 8b. CASE DUO — the framework on real decisions (anonymized)
+           PERMISSION GATE: anonymized from real advisory situations — Bryan/Norman
+           must approve before publish (handoff Open Q). -->
+      <section class="band">
+  <section class="section">
+          <div class="section-title centered">
+            <p class="section-kicker">The framework on real decisions</p>
+            <h2>Two decisions the seven questions changed.</h2>
+            <p class="lead">Details anonymized from real advisory situations. Decision walkthroughs, not promises.</p>
+          </div>
+          <div class="case-duo">
+            <article class="case-study">
+              <img class="cs-image" src="/REB/assets/case-two-condos.jpg" alt="Two residential condominium towers standing side by side" loading="lazy">
+              <div class="cs-body">
+                <p class="cs-eyebrow">Single &middot; early 30s &middot; wanted a minimalist pad</p>
+                <h2 class="cs-name">The $400K flat that would have cost him two condos.</h2>
+                <p class="cs-tagline">He wanted a small flat as a one-bedroom-plus-home-gym base. The lifestyle math said yes. The asset math said something else.</p>
+                <div class="cs-stats">
+                  <div class="cs-stat"><strong>Q2 + Q3</strong><span>The questions that flipped it</span></div>
+                  <div class="cs-stat gain"><strong>2</strong><span>Condos he owns today instead</span></div>
+                </div>
+                <div class="cs-narrative">
+                  <p>
+                    Run the numbers both ways: the same percentage move yields roughly three times the
+                    gain on the bigger asset, and at his age, the loan leverage was his single biggest
+                    advantage. He rented the lifestyle, bought the asset, and the framework did the
+                    arguing.
+                  </p>
+                </div>
+                <p class="cs-insight"><strong>The point:</strong> Question 2 (financial readiness) and Question 3 (purchase type) exist to catch exactly this: a fine lifestyle decision that's a poor asset decision.</p>
+              </div>
+            </article>
+
+            <article class="case-study">
+              <img class="cs-image" src="/REB/assets/case-not-signing.jpg" alt="A hand resting on an unsigned document, the pen capped and set aside" loading="lazy">
+              <div class="cs-body">
+                <p class="cs-eyebrow">Clients ready to sign &middot; the advice no agent likes giving</p>
+                <h2 class="cs-name">The clients I told to wait.</h2>
+                <p class="cs-tagline">The numbers didn't clear the framework. So the recommendation was: not yet.</p>
+                <div class="cs-stats">
+                  <div class="cs-stat"><strong>6 mo</strong><span>Later, prices in their target dropped ~8%</span></div>
+                  <div class="cs-stat gain"><strong>$160K</strong><span>Saved on a $2M purchase</span></div>
+                </div>
+                <div class="cs-narrative">
+                  <p>
+                    Timing isn't about catching the absolute bottom. It's about not buying at the top,
+                    and the timing question (Question 7) is in the framework precisely because "wait"
+                    is sometimes the highest-value recommendation an agent can make.
+                  </p>
+                </div>
+                <p class="cs-insight"><strong>The point:</strong> a framework with a real walk-away built in works for you even when it works against the agent.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <!-- 8c. WHAT HAPPENS WHEN YOU SEND A PROPERTY -->
+      <section class="section narrow">
+        <div class="section-title">
+          <p class="section-kicker">After the download</p>
+          <h2>What happens when you send me a property.</h2>
+          <p class="lead">No consultation required. No pitch unless the numbers earn it. Here's exactly how it goes.</p>
+        </div>
+        <div class="expect-steps">
+          <div class="expect-step"><span class="es-num">1</span><div><h3>You send the URL on WhatsApp</h3><p>The property you're considering: new launch, resale, or sub-sale. That's all I need to start.</p></div></div>
+          <div class="expect-step"><span class="es-num">2</span><div><h3>I run the seven questions on it</h3><p>Market direction, your financial fit, purchase type, development quality, pricing justification, floor premium, timing, scored against real transaction data.</p></div></div>
+          <div class="expect-step"><span class="es-num">3</span><div><h3>You get the REB score back within 48 hours. Free.</h3><p>The score is yours either way. Use it with me, with your own agent, or on your own.</p></div></div>
+          <div class="expect-step"><span class="es-num">4</span><div><h3>The conversation only happens if the numbers earn it</h3><p>At 50/70 or above, we can talk about the full consultation. Below that, I'll tell you what I'd look at instead. No pitch.</p></div></div>
+        </div>
+      </section>
+
+      <!-- 8d. FIT CHECK -->
+      <section class="band">
+  <section class="section narrow">
+          <div class="section-title">
+            <p class="section-kicker">Honest fit check</p>
+            <h2>Is the REB Framework for you?</h2>
+          </div>
+          <div class="fit-grid">
+            <div class="fit-col yes">
+              <p class="fit-label">&rarr; It's built for you if</p>
+              <ul>
+                <li>You're a professional in your late 20s to early 40s planning a property move</li>
+                <li>You're upgrading from HDB, buying your first private, or redeploying a condo</li>
+                <li>You're looking in roughly the $1.5M&ndash;$6M range</li>
+                <li>You want every dollar of premium defended with data</li>
+                <li>You'd rather hear "walk away" than discover it on exit day</li>
+              </ul>
+            </div>
+            <div class="fit-col no">
+              <p class="fit-label">&rarr; It's not for you if</p>
+              <ul>
+                <li>You want someone to guarantee returns. No honest advisor can</li>
+                <li>You've already fallen for a unit and just want validation</li>
+                <li>You're chasing the cheapest unit over the smartest one</li>
+                <li>You're not open to discussing your numbers candidly</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- 8e. FAQ -->
+      <section class="section narrow">
+        <div class="section-title">
+          <p class="section-kicker">Straight answers</p>
+          <h2>Questions buyers ask before downloading.</h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item">
+            <summary>Is the framework, and the 48-hour score, really free?</summary>
+            <p>Yes. The PDF, the scorecard, and one REB score on a property of your choice: free, no consultation required. The conversation only happens if the numbers earn it.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if the property I'm considering scores badly?</summary>
+            <p>Then you'll know before you sign instead of after, which is the entire point. I'll tell you which questions it failed and what I'd look at instead. A low score on a property you haven't bought yet costs you nothing.</p>
+          </details>
+          <details class="faq-item">
+            <summary>I'm not buying yet. Am I wasting your time?</summary>
+            <p>No. The framework is most valuable before the clock is ticking. Score the market now, learn what the seven questions look like in your target area, and when the right unit appears you'll move with a system instead of a feeling.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if I buy and the market drops?</summary>
+            <p>That's what the framework is built to protect first. Question 1 reads the cycle and the supply pipeline; Question 2 makes sure you're not stretched; Question 7 checks the timing. I can't promise the market never dips. I can make sure you enter with a buffer, a floor, and an exit that's still there when it matters.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Couldn't I just read the property articles myself?</summary>
+            <p>You should. I consult on them at Stacked Homes twice a week. But articles analyze the market. The framework scores <em>your</em> property, against <em>your</em> finances, on <em>your</em> timeline. That's the difference between information and a decision.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Will you just push me a listing?</summary>
+            <p>No. The first thing you get is a score, not a pitch. If a property scores below 50/70, I'll tell you that, even if it costs me the sale. That discipline is why clients come back for their second and third moves.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8f. TESTIMONIALS -->
+      <section class="section">
+        <div class="section-title centered">
+          <p class="section-kicker">In their words</p>
+          <h2>What clients say.</h2>
+          <p class="lead">One review, in full and unedited.</p>
+          <!-- BUILD NOTE: this stack scales. To add a review, duplicate one
+               <figure class="testimonial-card"> block. Screenshots, if you get
+               permission to use them, still fit the old .testimonial-grid /
+               .testimonial-tile classes which remain in styles.css. -->
+        </div>
+        <div class="testimonial-stack">
+
+          <figure class="testimonial-card">
+            <blockquote class="tc-quote">
+              <p>&ldquo;As a business owner, I'm always pressed for time, so I appreciate that Norman's deep expertise in real estate helps me cut through the noise in the market and get to effective results fast.</p>
+              <p>I've made bad mistakes in the past buying property before I met Norman. Now, with his research and analysis, it helps me identify problems with even popular locations, and shows me the data about property price trends that I can take advantage of.</p>
+              <p>Even with the uncertainty during the pandemic, Norman's knowledge and experience gave me the confidence to enter the market. Since then, the market has moved significantly upwards, so I'm thankful for Norman's help. I'd highly recommend Norman for anyone who appreciates getting clarity with buying and selling real estate.&rdquo;</p>
+            </blockquote>
+            <figcaption class="tc-attrib">
+              <!-- Falls back to the AP monogram if the photo fails to load. -->
+              <img
+                class="tc-avatar"
+                src="/REB/assets/alvin-poh.jpg"
+                alt="Alvin Poh"
+                width="200"
+                height="200"
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+              >
+              <span class="tc-monogram" hidden aria-hidden="true">AP</span>
+              <span class="tc-who">
+                <span class="tc-name">Alvin Poh</span>
+                <span class="tc-role">Serial entrepreneur and investor</span>
+              </span>
+            </figcaption>
+          </figure>
+
+        </div>
+      </section>
+
+      <!-- 9. Final opt-in -->
+      <section class="band">
+        <div class="section">
+          <div class="optin-layout">
+            <div>
+              <p class="section-kicker">Score your next property before you sign</p>
+              <h2>Get the framework. Use it on the property you're looking at right now.</h2>
+              <p class="lead">
+                Download the PDF + Scorecard. Run the seven questions on your shortlist. If you want me to sanity-check the score, send me the URL on WhatsApp afterward. Free.
+              </p>
+              <ul class="handoff-list">
+                <li>The 7-question REB Framework PDF.</li>
+                <li>The REB Scorecard worksheet.</li>
+                <li>A free 48-hour REB Score on a property you're considering.</li>
+                <li>No consultation required. No pitch unless the numbers earn it.</li>
+              </ul>
+            </div>
+
+            <div class="form-panel">
+              <h3 class="form-heading">Send me the framework.</h3>
+              <p class="form-lead">
+                Delivered within 60 seconds. WhatsApp follow-up only if you ask for one.
+              </p>
+
+              <!-- LIVE FORM: posts to /api/lead (anti-bot + geo gate) → GHL webhook. Do NOT replace with a GHL iframe embed — that bypasses the bot/geo protection. -->
+              <!-- GHL thank-you redirect should point to thank-you.html or the hosted equivalent. -->
+              <form action="thank-you.html" method="get" data-lead-form novalidate>
+                <div class="field">
+                  <label for="first-name">First name</label>
+                  <input id="first-name" name="first_name" type="text" autocomplete="given-name" required>
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone (for the 48h REB Score on WhatsApp)</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+                </div>
+                <!-- Honeypot: hidden from humans; bots that fill it are rejected server-side. -->
+                <div class="hp-field" aria-hidden="true">
+                  <label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+                </div>
+                <!-- Cloudflare Turnstile widget. Replace TURNSTILE_SITEKEY with the real sitekey before publish. -->
+                <div class="cf-turnstile" data-sitekey="TURNSTILE_SITEKEY" data-placeholder="TURNSTILE_SITEKEY" data-size="flexible"></div>
+                <button class="button primary full-width" type="submit">Send me the framework</button>
+                <div class="form-error">Pop in your name, a valid email, and a Singapore or Malaysia mobile.</div>
+                <p class="privacy-note">
+                  Delivered within 60 seconds. Unsubscribe anytime.
+                </p>
+              <!-- Lead recovery: hidden until a submit actually fails, then revealed
+                   by showFallback() in form.js. Restored 2026-09-03 — it had been
+                   removed by mistake (the "troubleshoot" link Collen meant was
+                   Cloudflare Turnstile's error state, not this). Without it a broken
+                   form is a dead end and the lead is lost. -->
+              <div class="form-fallback" hidden>
+                Something didn't go through.
+                <a href="https://wa.me/65XXXXXXXX?text=Hi%20Norman%2C%20I%20tried%20to%20download%20the%20REB%20Framework%20but%20the%20form%20didn%27t%20go%20through.%20Could%20you%20send%20it%20to%20me%20directly%3F" data-placeholder="WHATSAPP_URL">Message me on WhatsApp</a>
+                and I'll send it to you directly.
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Norman Koh / PropNex Realty</p>
+      <p>CEA Registration: [CEA_NUMBER_PLACEHOLDER] / PropNex Realty Pte Ltd (L3008022J)</p>
+      <p class="disclaimer">
+        Past client outcomes depend on each buyer's situation, capital, and market timing, and are not a
+        guarantee of future returns. Property carries risk. This page is educational and not financial advice.
+      </p>
+    </footer>
+
+
+    <!-- Sticky CTA — revealed once the hero form scrolls out of view,
+         hidden again over the final opt-in so it never covers that form. -->
+    <div class="sticky-cta" id="stickyCta" data-show="false" hidden>
+      <span class="sticky-cta-text">
+        The REB Framework, free.
+        <small>PDF + scorecard in 60 seconds</small>
+      </span>
+      <a class="button primary" href="#download">Send it to me</a>
+    </div>
+
+    <script src="/REB/form.js"></script>
+  </body>
+</html>

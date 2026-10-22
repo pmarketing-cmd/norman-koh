@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Launch or Resale? | Norman Koh · Singapore Property</title>
+    <meta
+      name="description"
+      content="New launch or resale is the wrong question. Get the 3-Stage Test Norman Koh runs with every buyer: free guide + REB Scorecard + a free 48h exit-pool run on a property of your choice."
+    >
+    <!-- Soft-launch: uncomment to keep this out of search during testing.
+    <meta name="robots" content="noindex"> -->
+    <link rel="stylesheet" href="/resale/styles.css">
+    <!-- Cloudflare Turnstile (invisible bot challenge). Loads the widget script. -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  </head>
+  <body>
+    <main class="page">
+
+      <!-- ============================================================
+           1. HERO (Linden architecture: brand row, copy left, value-card right)
+           ============================================================ -->
+      <section class="hero">
+        <div class="hero-brand" aria-label="Norman Koh">
+          <span class="brand-mark">NK</span>
+          <span class="brand-copy">
+            <strong>Norman Koh</strong>
+            <small>Singapore property &middot; Real Estate Blueprint</small>
+          </span>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">For buyers deciding between new launch and resale</span>
+            <h1>&ldquo;New launch or resale, which is better?&rdquo; is the wrong question.</h1>
+            <p class="hero-redline">The right one: how long do you hold, and who buys it from you at exit?</p>
+            <p class="hero-subtitle">
+              Most buyers simply look at the prices to decide what to purchase. That is upside down.
+              It can be a five, six, even seven-figure mistake.
+            </p>
+            <p class="hero-subtitle">
+              I wrote down the 3-Stage Test I run with every client before they go anywhere near a
+              showflat. It's free, and it takes 90 seconds to use.
+            </p>
+            <a class="button primary hero-cta" href="#download-guide">Send me the guide</a>
+            <p class="hero-note">Free. Delivered in 60 seconds. No consultation required.</p>
+          </div>
+
+          <aside class="hero-guide" aria-label="What's inside the guide">
+            <div class="value-card">
+              <p class="vc-head">Inside the free guide</p>
+              <ul class="value-list">
+                <li><strong>The 90-second answer:</strong> the 3-Stage Test on one page</li>
+                <li><strong>New launch vs resale, exit-first:</strong> what each lane looks like when you start from the sale, not the purchase</li>
+                <li><strong>The decision matrix:</strong> your stage, your timeline, your lane</li>
+                <li><strong>Bonus:</strong> the REB Scorecard. Score any unit out of 70 on the same 7 questions I use, before you sign</li>
+                <li><strong>Free 48h exit-pool run:</strong> send me one property, I'll run the exit math on it</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           2. PRIMARY DOWNLOAD FORM
+           ============================================================ -->
+      <section class="download-section" id="download-guide">
+        <div class="download-grid">
+          <div class="download-copy">
+            <p class="section-kicker">The 3-Stage Test</p>
+            <h2>Stop comparing prices. Start comparing exits.</h2>
+            <p class="lead">
+              After reading, you'll know which lane is actually yours (new launch, resale, or
+              sub-sale), and you'll know it from the exit backwards, the way I run it for clients.
+              This 3-Stage Test is Question 3 of my full REB framework, the seven questions I score
+              every property on, out of 70.
+            </p>
+            <div class="download-benefits">
+              <span>Your lane: stage 1, 2 or 3</span>
+              <span>Safe entry vs the expensive top</span>
+              <span>Your exit buyer, identified</span>
+            </div>
+          </div>
+
+          <aside class="lead-form-panel standalone">
+            <p class="form-eyebrow">Free download</p>
+            <p class="form-heading">Get the guide + scorecard</p>
+            <p class="form-lead">
+              Delivered within 60 seconds. The phone number is for your free 48h exit-pool run on WhatsApp.
+            </p>
+
+            <!-- LIVE FORM: posts to /api/lead (anti-bot + geo gate) → GHL webhook. Do NOT replace with a GHL iframe embed — that bypasses the bot/geo protection. -->
+            <form class="lead-form" id="lead-form-hero" data-lead-form novalidate>
+              <div class="field">
+                <label for="hero-first-name">First name</label>
+                <input id="hero-first-name" name="first_name" type="text" autocomplete="given-name" required>
+              </div>
+              <div class="field">
+                <label for="hero-email">Email</label>
+                <input id="hero-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+              </div>
+              <div class="field">
+                <label for="hero-phone">Phone (Singapore / Malaysia mobile)</label>
+                <input id="hero-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+              </div>
+              <label class="form-consent">
+                <input type="checkbox" name="whatsapp_opt_in" value="yes" required>
+                <span>Yes, WhatsApp me the guide and my exit-pool run. No spam, no broadcast list.</span>
+              </label>
+              <!-- Honeypot: hidden from humans; bots that fill it are rejected server-side. -->
+              <div class="hp-field" aria-hidden="true">
+                <label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+              </div>
+              <!-- Cloudflare Turnstile widget. Replace TURNSTILE_SITEKEY with the real sitekey before publish. -->
+              <div class="cf-turnstile" data-sitekey="TURNSTILE_SITEKEY" data-placeholder="TURNSTILE_SITEKEY" data-size="flexible"></div>
+              <button type="submit" class="button primary full-width">Send me the guide &rarr;</button>
+              <div class="form-error">Pop in your name, a valid email, and a Singapore or Malaysia mobile, then tick the box.</div>
+              <p class="form-fineprint">Free. No cost, no obligation. Unsubscribe anytime.</p>
+              <div class="form-fallback" hidden>
+                Something didn't go through. <a href="WHATSAPP_URL" data-placeholder="WHATSAPP_URL">Message me on WhatsApp</a> and I'll send it directly.
+              </div>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           3. PROBLEM BAND
+           ============================================================ -->
+      <section class="band">
+        <div class="section">
+          <div class="section-title centered">
+            <p class="section-kicker">The dilemma every buyer is stuck in</p>
+            <h2>Both camps argue about the entry. Nobody argues about the exit.</h2>
+          </div>
+          <div class="prose">
+            <p>
+              The new-launch camp has the showflat, the progressive payments, the pick of inventory.
+              The resale camp has the actual unit, the actual view, the move-in date. Both sides sound
+              right, because both sides are arguing about the purchase.
+            </p>
+            <p>
+              Here's what I ask buyers in every session: <strong>has anyone ever explained new sale,
+              resale, and sub-sale to you properly, with the behavior behind each?</strong>
+              The answer I keep hearing: <span class="em-red">&ldquo;No. Nobody.&rdquo;</span>
+              They almost buy without understanding this.
+            </p>
+          </div>
+          <div class="problem-grid">
+            <article class="card">
+              <span class="card-num">01 / Price-Led</span>
+              <h3>Deciding by what's cheaper this month.</h3>
+              <p>Most people look at the prices of the property to decide what to purchase. That is upside down.</p>
+              <p class="card-consequence">
+                <strong>What it costs:</strong> a five, six, even seven-figure mistake, discovered only on exit day.
+              </p>
+            </article>
+            <article class="card">
+              <span class="card-num">02 / Hype-Led</span>
+              <h3>Buying because the showflat felt good.</h3>
+              <p>The showflat is doing its job. The brochure is doing its job. Neither is doing yours.</p>
+              <p class="card-consequence">
+                <strong>What it costs:</strong> an entry at the expensive top of the price cluster, paid walking in.
+              </p>
+            </article>
+            <article class="card">
+              <span class="card-num">03 / No Exit Math</span>
+              <h3>Buying without knowing who buys it from you.</h3>
+              <p>On exit day, the unit doesn't sell itself. The pool of buyers around it does. Most buyers never count that pool.</p>
+              <p class="card-consequence">
+                <strong>What it costs:</strong> the right unit at the wrong stage, locked up for years waiting on a buyer.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           5. WHO ARE YOU — 3 buyer profiles
+           ============================================================ -->
+      <section class="section">
+        <div class="section-title centered">
+          <p class="section-kicker">Start with your stage, not the market's mood</p>
+          <h2>Most buyers I meet are one of three people.</h2>
+          <p class="lead">The test starts with which one you are, because each has a different lane and a different exit buyer.</p>
+        </div>
+        <div class="problem-grid">
+          <article class="card">
+            <span class="card-num">01 / The Upgrader</span>
+            <h3>HDB to condo, kids, schools, keys needed now.</h3>
+            <p>Your timeline doesn't bend. Waiting three to five years for a launch isn't a strategy. It's a tax on your family's life.</p>
+          </article>
+          <article class="card">
+            <span class="card-num">02 / The Asset-Builder</span>
+            <h3>Early 30s, can wait, building the first serious asset.</h3>
+            <p>Time and loan leverage are on your side, if you don't get stuck in a unit type with a thin exit pool.</p>
+          </article>
+          <article class="card">
+            <span class="card-num">03 / The Redeployer</span>
+            <h3>Already own a condo. Deciding the next move.</h3>
+            <p>Your question isn't &ldquo;what's launching.&rdquo; It's which redeployment protects the downside and keeps the exit open.</p>
+          </article>
+        </div>
+        <p class="proof-note statement">All three lanes have their uses. I just need to know what your goal is.</p>
+      </section>
+
+      <!-- ============================================================
+           6. THE 3-STAGE LIFECYCLE (framework centerpiece)
+           ============================================================ -->
+      <section class="section">
+        <div class="section-title centered">
+          <p class="section-kicker">The 3-Stage Test</p>
+          <h2>Every property moves through three stages. Your exit buyer is waiting at one of them.</h2>
+          <p class="lead">
+            This is the life cycle I map for every client. How long you plan to hold decides your stage,
+            and your stage decides whether new launch or resale is right for you.
+          </p>
+        </div>
+        <div class="pillars">
+          <div class="pillar">
+            <span class="p-num">1</span>
+            <h3>Stage 1: New sale (0–3 yrs)</h3>
+            <p>Direct from the developer. Full inventory to pick from, progressive payments, 3–5 years to keys. For buyers who can wait, and who pick units with a deep exit pool.</p>
+          </div>
+          <div class="pillar">
+            <span class="p-num">2</span>
+            <h3>Stage 2: TOP / MOP (3–5 yrs)</h3>
+            <p>The second buyer purchases here, usually a homeowner who cannot wait for construction. This is where you typically see a natural six-figure movement upwards.</p>
+          </div>
+          <div class="pillar">
+            <span class="p-num">3</span>
+            <h3>Stage 3: Maturity (8–12+ yrs)</h3>
+            <p>Established estates. From here prices largely follow the property price index: up when the market's up, flat when it's flat. The lane for space-buyers and downsizers.</p>
+          </div>
+        </div>
+
+        <div class="questions">
+          <h3>The two unspoken rules that drive the whole pattern</h3>
+          <p class="lead">Nobody talks about them. Almost everybody practices them.</p>
+          <ol>
+            <li><strong>The support price:</strong> ask 100 owners if they'll sell below what they paid. Around 90 will refuse. That refusal puts a floor under every stage. It's also why transactions dry up in a downturn before prices crash.</li>
+            <li><strong>The break-even march:</strong> stamp duty and interest add roughly $100–120K to a $1.5M purchase. Sellers don't list at cost. They list above it. That's the staircase between the stages.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           7. MOST AGENTS VS THE EXIT-FIRST APPROACH
+           ============================================================ -->
+      <section class="section narrow">
+        <div class="section-title">
+          <p class="section-kicker">What sets this apart</p>
+          <h2>Most agents start with the entry. I start with the exit.</h2>
+        </div>
+        <div class="fit-grid">
+          <div class="fit-col no">
+            <p class="fit-label">&times; Most agents</p>
+            <ul>
+              <li>Pitch the project of the month</li>
+              <li>Sell the showflat feeling and the launch incentives</li>
+              <li>Talk entry price, never exit price</li>
+              <li>Tell you new launch is always better, or resale is always safer</li>
+              <li>End the relationship at the handover</li>
+            </ul>
+          </div>
+          <div class="fit-col yes">
+            <p class="fit-label">&rarr; The exit-first approach</p>
+            <ul>
+              <li>Maps your stage and your holding period before any listing</li>
+              <li>Counts your exit pool: who buys it from you, and how many of them exist</li>
+              <li>Sets the walk-away PSF before the viewing, from transacted data</li>
+              <li>Says it plainly: &ldquo;Not every time buying new is better.&rdquo;</li>
+              <li>Runs the same framework on my own portfolio</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           8. THE METHODOLOGY — REB 5 stages
+           ============================================================ -->
+      <section class="section">
+        <div class="section-title">
+          <p class="section-kicker">The methodology behind the test</p>
+          <h2>The Real Estate Blueprint runs end-to-end, from your life stage to your exit.</h2>
+          <p class="lead">
+            The 3-Stage Test is the front door. Behind it sits the full REB framework I run on every
+            property I recommend, including the ones I tell clients to walk away from.
+          </p>
+        </div>
+        <div class="reb-strip">
+          <article class="reb-stage">
+            <span class="reb-stage-num">01</span>
+            <h3>Discover</h3>
+            <p>Life stage, goals, constraints. Before any listing.</p>
+          </article>
+          <article class="reb-stage">
+            <span class="reb-stage-num">02</span>
+            <h3>Market</h3>
+            <p>URA data, transaction trends, supply pipeline.</p>
+          </article>
+          <article class="reb-stage">
+            <span class="reb-stage-num">03</span>
+            <h3>Shortlist</h3>
+            <p>Right-pricing methodology, filter to 2&ndash;3 real candidates.</p>
+          </article>
+          <article class="reb-stage">
+            <span class="reb-stage-num">04</span>
+            <h3>Unit</h3>
+            <p>Stack, facing, layout, long-term resale profile.</p>
+          </article>
+          <article class="reb-stage">
+            <span class="reb-stage-num">05</span>
+            <h3>Exit</h3>
+            <p>Start with the end. Know the exit before the entry.</p>
+          </article>
+        </div>
+        <p class="reb-strip-caption">
+          Same framework, same data, every property. <span class="mono">No gut feelings.</span>
+        </p>
+      </section>
+
+      <!-- ============================================================
+           9. CASE STUDIES — 3 advisory walkthroughs (anonymized)
+           PERMISSION GATE: anonymized from real consults — Bryan/Norman
+           must approve before publish (handoff Open Q).
+           ============================================================ -->
+      <section class="section narrow">
+        <div class="section-title centered">
+          <p class="section-kicker">Three buyers, three different answers</p>
+          <h2>The same test, run on real situations.</h2>
+          <p class="lead">Details anonymized from real advisory sessions. These are decision walkthroughs, not promises.</p>
+        </div>
+
+        <article class="case-study">
+          <figure class="cs-visual">
+            <img class="cs-image" src="/resale/assets/case-ec.jpg" alt="A condominium block with repeated balconies beside a communal pool" loading="lazy">
+          </figure>
+          <div class="cs-body">
+            <p class="cs-eyebrow">The redeployers &middot; working couple &middot; EC owners</p>
+            <h2 class="cs-name">Sitting on a doubled EC, and stuck on what's next.</h2>
+            <p class="cs-tagline">Bought their 3-bedroom EC for about $800K in 2016. Today it's worth around $1.6M. The question wasn't whether to move. It was sell now or wait, and one bigger unit or two smaller ones.</p>
+            <div class="cs-stats">
+              <div class="cs-stat gain"><strong>~2x</strong><span>Paper gain since 2016</span></div>
+              <div class="cs-stat"><strong>3</strong><span>Decisions mapped with numbers</span></div>
+              <div class="cs-stat"><strong>1st</strong><span>Step: the loan clause, not a listing</span></div>
+            </div>
+            <div class="cs-narrative">
+              <p>
+                Before any property talk, we checked the boring thing: the bank's letter of offer, for a
+                waiver-on-sale clause that changed the whole timeline. Then the stage logic: as redeployers
+                with no urgency to move in, their decision wasn't &ldquo;which launch.&rdquo; It was which
+                route kept the exit open. Sell now versus wait, one bigger unit versus two smaller,
+                each mapped with the actual numbers before anyone fell for a unit.
+              </p>
+            </div>
+            <p class="cs-insight"><strong>The point:</strong> the lane decision starts from a loan clause and a stage map, not from a showflat.</p>
+          </div>
+        </article>
+
+        <article class="case-study">
+          <figure class="cs-visual">
+            <img class="cs-image" src="/resale/assets/case-ballot.jpg" alt="An empty launch-gallery registration table with queue barriers and stacked brochures" loading="lazy">
+          </figure>
+          <div class="cs-body">
+            <p class="cs-eyebrow">The upgraders &middot; young couple &middot; budget moved 5x in 3 years</p>
+            <h2 class="cs-name">They gave up a BTO. Then their timeline changed everything.</h2>
+            <p class="cs-tagline">First spoke to me in 2021 with a $500K&ndash;$1M budget. Gave up a good BTO queue number because 2027 completion was too far away. Three years later they were back: income up, first-timer status gone, budget at $2.73M.</p>
+            <div class="cs-stats">
+              <div class="cs-stat"><strong>2021&rarr;24</strong><span>Same couple, different stage</span></div>
+              <div class="cs-stat gain"><strong>$1M&rarr;$2.73M</strong><span>Budget growth in 3 years</span></div>
+              <div class="cs-stat"><strong>PSF</strong><span>Compared on transacted data, not brochures</span></div>
+            </div>
+            <div class="cs-narrative">
+              <p>
+                In 2021 their stage said one thing. By 2024, with a new timeline and new constraints, the
+                stage map pointed somewhere else entirely, and we compared the launch option against
+                the 14-year-old resale next door on transacted PSF, not on brochures. Different stage,
+                different lane, same framework.
+              </p>
+            </div>
+            <p class="cs-insight"><strong>The point:</strong> &ldquo;new launch or resale&rdquo; has a different answer at different stages of your own life. That's why it's a test, not a slogan.</p>
+          </div>
+        </article>
+
+        <article class="case-study">
+          <figure class="cs-visual">
+            <img class="cs-image" src="/resale/assets/case-investor.jpg" alt="High-rise residential districts seen from an airplane window" loading="lazy">
+          </figure>
+          <div class="cs-body">
+            <p class="cs-eyebrow">The asset-builder &middot; 37 &middot; single, working abroad</p>
+            <h2 class="cs-name">Never going to live in it. So the test changes completely.</h2>
+            <p class="cs-tagline">A 37-year-old professional finishing a posting overseas. Pure investment, long holding period, zero need to occupy. His father, a client from seven-odd years back, sent him to me.</p>
+            <div class="cs-stats">
+              <div class="cs-stat"><strong>Stage 1</strong><span>His lane: new sale, long hold</span></div>
+              <div class="cs-stat"><strong>0</strong><span>1-bedders on the shortlist</span></div>
+              <div class="cs-stat"><strong>7&ndash;8 yrs</strong><span>Since I served his father</span></div>
+            </div>
+            <div class="cs-narrative">
+              <p>
+                Investor, long hold, no need for keys: the stage map puts him squarely in stage 1.
+                But with the avoid-list applied hard: no one-bedders or two-bed-one-baths, no
+                no-school high-yield pockets, no boutique freehold. The rental fallback only works
+                if the exit pool exists.
+              </p>
+            </div>
+            <p class="cs-insight"><strong>The point:</strong> same question, opposite answer from the upgraders, because his stage and exit are different.</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============================================================
+           10. CASE DUO — the lifecycle proven twice
+           ============================================================ -->
+      <section class="section">
+        <div class="section-title centered">
+          <p class="section-kicker">The pattern, not luck</p>
+          <h2>Two stories I keep coming back to.</h2>
+        </div>
+        <div class="case-duo">
+          <article class="case-study">
+            <div class="cs-body">
+              <p class="cs-eyebrow">One address &middot; three owners &middot; fifteen years</p>
+              <h2 class="cs-name">I sold the same house three times.</h2>
+              <p class="cs-tagline">A 60-plus bank retiree sold it to a couple in their mid-30s. Years later, that couple sold it to fund their landed move in their 40s. The full life cycle, through one door.</p>
+              <div class="cs-stats">
+                <div class="cs-stat"><strong>3</strong><span>Owners, same address</span></div>
+                <div class="cs-stat"><strong>3</strong><span>Stages of the life cycle, live</span></div>
+              </div>
+              <p class="cs-insight"><strong>The point:</strong> the 3-Stage Test isn't theory. It's the same map, running through every address in Singapore, including yours.</p>
+            </div>
+          </article>
+
+          <article class="case-study">
+            <div class="cs-body">
+              <p class="cs-eyebrow">A Jurong East launch &middot; bought at the 2013 peak</p>
+              <h2 class="cs-name">The launch I thought was &ldquo;a bit too high.&rdquo;</h2>
+              <p class="cs-tagline">My own army friend bought a unit there at $1,680 psf, at what turned out to be the 2013 peak. Transactions went quiet for years. I track what happened next.</p>
+              <div class="cs-stats">
+                <div class="cs-stat gain"><strong>200</strong><span>Profitable exits, 10 yrs on*</span></div>
+                <div class="cs-stat"><strong>2</strong><span>Losses, both minimal*</span></div>
+              </div>
+              <p class="cs-insight"><strong>The point:</strong> the support price and the break-even march did their work, even for buyers who entered at the top. Pricing discipline beats timing fear.</p>
+            </div>
+          </article>
+        </div>
+        <p class="proof-note">*Transaction outcomes Norman tracks from caveat data on specific projects. Ask for the current numbers on any project you're considering. Past outcomes are not promises.</p>
+      </section>
+
+      <!-- ============================================================
+           11. PROOF GRID — credential tiles (verified claims only)
+           ============================================================ -->
+      <section class="section">
+        <div class="section-title centered">
+          <p class="section-kicker">Who's running the numbers</p>
+          <h2>The person reading your shortlist has his own money in this market.</h2>
+        </div>
+        <div class="proof-grid">
+          <div class="proof-card">
+            <span class="pc-num">$500M+</span>
+            <div class="pc-name">Transacted across 15 years</div>
+            <span class="pc-tag">Track record</span>
+            <p class="pc-detail">Pattern recognition built one deal at a time, since 2010.</p>
+          </div>
+          <div class="proof-card">
+            <span class="pc-num">169,043</span>
+            <div class="pc-name">Views on the ad asking this exact question</div>
+            <span class="pc-tag">The question that won't die</span>
+            <p class="pc-detail">&ldquo;New launch or resale is better?&rdquo; I've been answering it on camera since 2022.</p>
+          </div>
+          <div class="proof-card">
+            <span class="pc-num">Stacked</span>
+            <div class="pc-name">Principal consultant, Stacked Homes</div>
+            <span class="pc-tag">Editorial authority</span>
+            <p class="pc-detail">Consulting on the property articles Singapore actually reads, twice a week.</p>
+          </div>
+          <div class="proof-card">
+            <span class="pc-num">Luxury</span>
+            <div class="pc-name">One of the chiefs-in-charge, PropNex Luxury team</div>
+            <span class="pc-tag">Inside the largest agency</span>
+            <p class="pc-detail">Access to every project, and no reason to force the wrong one on you.</p>
+          </div>
+          <div class="proof-card">
+            <span class="pc-num">$5M+</span>
+            <div class="pc-name">Personal portfolio, same framework</div>
+            <span class="pc-tag">Practice what I preach</span>
+            <p class="pc-detail">Every recommendation I make is one I would make with my own money.</p>
+          </div>
+          <div class="proof-card">
+            <span class="pc-num">30+</span>
+            <div class="pc-name">Agents trained on this framework weekly</div>
+            <span class="pc-tag">Not a solo act</span>
+            <p class="pc-detail">I share the lessons every week so my team doesn't repeat my early mistakes.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           12. HOW THE DECISION GETS MADE — the four numbers
+           ============================================================ -->
+      <section class="section narrow">
+        <div class="section-title">
+          <p class="section-kicker">Before anyone signs anything</p>
+          <h2>The four numbers I want answered, in any lane.</h2>
+          <p class="lead">If you can answer all four, the new-launch-or-resale question has already answered itself.</p>
+        </div>
+        <div class="questions">
+          <h3>The exit-first checklist</h3>
+          <ol>
+            <li><strong>Holding period:</strong> how long until you realistically sell?</li>
+            <li><strong>Support price:</strong> what did the owners around you pay? That's your floor.</li>
+            <li><strong>Entry point:</strong> where does this unit sit in the transacted cluster? The safe middle, or the expensive top?</li>
+            <li><strong>Exit pool:</strong> who, specifically, buys this from you at the end, and how many of them are there?</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           13. 5 MISTAKES
+           ============================================================ -->
+      <section class="section narrow">
+        <div class="section-title">
+          <p class="section-kicker">Before you decide</p>
+          <h2>The 5 ways buyers get new-launch-vs-resale wrong.</h2>
+        </div>
+        <div class="mistakes">
+          <div class="mistake"><span class="m-num">01</span><div><h3>Deciding by price</h3><p>Comparing this month's launch PSF against a resale asking price and calling it analysis. That's the upside-down decision.</p><p class="m-fix"><strong>Fix:</strong> decide by stage and exit first; price the unit against its own transacted cluster second.</p></div></div>
+          <div class="mistake"><span class="m-num">02</span><div><h3>The forever home at 29</h3><p>Locking into a &ldquo;forever&rdquo; purchase before your life stage has even settled: a long commitment that handcuffs the exits that matter most in your 30s.</p><p class="m-fix"><strong>Fix:</strong> optimize for flexibility of exit. Buy something you can leave in 4 years without bleeding.</p></div></div>
+          <div class="mistake"><span class="m-num">03</span><div><h3>Buying the showflat feeling</h3><p>The unit you fell in love with at the launch is staged to be fallen in love with. Feelings don't show up in the caveat data.</p><p class="m-fix"><strong>Fix:</strong> score the property before feelings get a vote. The scorecard is in the guide.</p></div></div>
+          <div class="mistake"><span class="m-num">04</span><div><h3>The thin exit pool</h3><p>One-bedders, two-bed-one-baths, high-yield stories in areas with no schools, boutique freehold low-rises: they all share one flaw. Too few buyers standing there on exit day.</p><p class="m-fix"><strong>Fix:</strong> count the exit pool before you fall for the yield story.</p></div></div>
+          <div class="mistake"><span class="m-num">05</span><div><h3>No walk-away number</h3><p>Walking into a viewing or a launch weekend without a pre-set walk-away PSF is how you end up at the expensive top of the cluster.</p><p class="m-fix"><strong>Fix:</strong> set the walk-away PSF from transacted data before the viewing, and keep it.</p></div></div>
+        </div>
+        <div class="section-title centered guide-mid-cta">
+          <a class="button primary" href="#download-guide">Send me the guide</a>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           14. WHAT HAPPENS WHEN YOU SEND ME A PROPERTY
+           ============================================================ -->
+      <section class="section narrow">
+        <div class="section-title">
+          <p class="section-kicker">After the guide</p>
+          <h2>What happens when you send me a property.</h2>
+          <p class="lead">No consultation required. No pitch unless the numbers earn it. Here's exactly how it goes.</p>
+        </div>
+        <div class="expect-steps">
+          <div class="expect-step"><span class="es-num">1</span><div><h3>You send the URL on WhatsApp</h3><p>The property you're deciding on, or two of them if you're torn between a launch and a resale. That's all I need to start.</p></div></div>
+          <div class="expect-step"><span class="es-num">2</span><div><h3>I run the exit pool and the stage math</h3><p>Who buys it from you later, what the supply pipeline around it looks like, where the safe entry sits in the transacted cluster, and where I'd walk away.</p></div></div>
+          <div class="expect-step"><span class="es-num">3</span><div><h3>You get it back within 48 hours. Free.</h3><p>The numbers are yours either way. Use them with me, with your own agent, or on your own.</p></div></div>
+          <div class="expect-step"><span class="es-num">4</span><div><h3>The conversation only happens if the numbers earn it</h3><p>If the property holds up, we can talk about the full consultation. If it doesn't, I'll tell you that too, and what I'd look at instead.</p></div></div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           15. FIT CHECK
+           ============================================================ -->
+      <section class="section narrow">
+        <div class="section-title">
+          <p class="section-kicker">Honest fit check</p>
+          <h2>Is this for you?</h2>
+        </div>
+        <div class="fit-grid">
+          <div class="fit-col yes">
+            <p class="fit-label">&rarr; It's built for you if</p>
+            <ul>
+              <li>You're deciding between new launch and resale in the next 12 months</li>
+              <li>You're looking in roughly the $1.5M&ndash;$6M range</li>
+              <li>You want the math, not the showflat speech</li>
+              <li>You're willing to talk numbers candidly: income, loan, timeline</li>
+              <li>You think of property as an asset with an exit, not just a roof</li>
+            </ul>
+          </div>
+          <div class="fit-col no">
+            <p class="fit-label">&rarr; It's not for you if</p>
+            <ul>
+              <li>You want someone to guarantee returns. No honest advisor can</li>
+              <li>You've already decided and just want validation</li>
+              <li>You're chasing the cheapest unit over the smartest one</li>
+              <li>You're just browsing with no intention to act</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           16. FAQ — mined from real buyer objections
+           ============================================================ -->
+      <section class="section narrow">
+        <div class="section-title">
+          <p class="section-kicker">Straight answers</p>
+          <h2>The questions buyers ask me first.</h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item">
+            <summary>Prices are so high now. Shouldn't I just wait?</summary>
+            <p>Buyers tell me &ldquo;prices are very high&rdquo; year after year, and the support price keeps doing its work underneath. Waiting is sometimes right, but it's a decision with its own price tag. The honest answer depends on your stage and holding period, which is exactly what the test in the guide works out. And if cooling measures do come in, that's historically been an entry indicator, not an exit one. Developers price very sensitively after them.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Isn't there a wave of supply completing? Won't that crash prices?</summary>
+            <p>Twenty thousand units completing does not mean twenty thousand sellers. Maybe 10&ndash;15% of newly TOP'd units actually reach the market. The rest are owners who simply don't sell, because 90 out of 100 owners won't sell below what they paid. Supply waves matter, but you have to count actual sellers, not units.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Isn't it better to just buy freehold?</summary>
+            <p>Freehold carries a premium on top. You pay for it walking in. The government only sells 99-year land now, so freehold is scarce, but scarce isn't automatically right for your stage. And the one freehold category I consistently warn buyers off: boutique low-rise developments. They don't move the way people assume. The guide covers when each tenure actually earns its premium.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if I buy and the market drops?</summary>
+            <p>That's the first thing I protect, not the last. Two things historically happen in a downturn: the seller's stamp duty stops quick exits, and owners refuse to sell below cost, so transactions dry up before prices crash. That's the support price at work. I can't promise the market never dips. I can make sure you enter at the safe part of the cluster, with a floor under you and an exit pool that's still there when it matters.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are you just going to push me a new launch?</summary>
+            <p>No. Not every time buying new is better. I say that to clients in every session. The framework has a walk-away built into it, and I use it: if the numbers don't hold, I'll tell you, even if it costs me the deal. I'm in the largest agency, with access to every project. I have no reason to force the wrong one on you.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is the 48-hour exit-pool run really free?</summary>
+            <p>Yes. You send a property URL, you get the exit math back within 48 hours, free, no consultation required. The score is yours either way. The conversation only happens if the numbers earn it. That's the deal.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           17. TESTIMONIALS
+           ============================================================ -->
+      <section class="section">
+        <div class="section-title centered">
+          <p class="section-kicker">In their words</p>
+          <h2>What clients say.</h2>
+          <p class="lead">One review, in full and unedited.</p>
+          <!-- BUILD NOTE: this stack scales. To add a review, duplicate one
+               <figure class="testimonial-card"> block. Screenshots, if you get
+               permission to use them, still fit the old .testimonial-grid /
+               .testimonial-tile classes which remain in styles.css. -->
+        </div>
+        <div class="testimonial-stack">
+
+          <figure class="testimonial-card">
+            <blockquote class="tc-quote">
+              <p>&ldquo;As a business owner, I'm always pressed for time, so I appreciate that Norman's deep expertise in real estate helps me cut through the noise in the market and get to effective results fast.</p>
+              <p>I've made bad mistakes in the past buying property before I met Norman. Now, with his research and analysis, it helps me identify problems with even popular locations, and shows me the data about property price trends that I can take advantage of.</p>
+              <p>Even with the uncertainty during the pandemic, Norman's knowledge and experience gave me the confidence to enter the market. Since then, the market has moved significantly upwards, so I'm thankful for Norman's help. I'd highly recommend Norman for anyone who appreciates getting clarity with buying and selling real estate.&rdquo;</p>
+            </blockquote>
+            <figcaption class="tc-attrib">
+              <!-- Falls back to the AP monogram if the photo fails to load. -->
+              <img
+                class="tc-avatar"
+                src="/resale/assets/alvin-poh.jpg"
+                alt="Alvin Poh"
+                width="200"
+                height="200"
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+              >
+              <span class="tc-monogram" hidden aria-hidden="true">AP</span>
+              <span class="tc-who">
+                <span class="tc-name">Alvin Poh</span>
+                <span class="tc-role">Serial entrepreneur and investor</span>
+              </span>
+            </figcaption>
+          </figure>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           18. MEET NORMAN (origin — approved framing only)
+           ============================================================ -->
+      <section class="section">
+        <div class="meet-norman-grid">
+          <div>
+            <div class="norman-portrait">
+              <!-- Headshot supplied 2026-09-02. Source 1445x1709; CSS crops to 4:5
+                   and applies grayscale + contrast, which renders the PropNex
+                   jacket near-black. Swap the file in place to change it. -->
+              <img
+                src="/resale/assets/norman-headshot.jpg"
+                alt="Norman Koh, PropNex Realty"
+                class="norman-photo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              >
+              <div class="norman-photo-fallback" aria-hidden="true">
+                <span>NORMAN HEADSHOT</span>
+                <small>Drop assets/norman-headshot.jpg or replace src</small>
+              </div>
+            </div>
+            <p class="norman-portrait-caption">
+              Norman Koh &middot; PropNex Realty
+            </p>
+          </div>
+          <div>
+            <p class="section-kicker">About Norman</p>
+            <h2>I couldn't hustle. So I built a numbers way instead.</h2>
+            <p class="lead">
+              I grew up with real financial hardship. My dad's business was not going well, and I
+              watched what wrong financial decisions cost a family. I came into this industry in 2010
+              with a 1.9 GPA and no sales experience, and the industry I joined ran on hustle-selling.
+              I couldn't hustle. I kept asking why instead.
+            </p>
+            <div class="journey">
+              <div class="journey-step"><span class="js-stage">2010 &middot; The start</span><span class="js-name">$52K in 25 months</span><span class="js-detail">First two years: barely surviving on NS savings and personal-training income. Nearly quit.</span><span class="js-gain">The why questions started here</span></div>
+              <div class="journey-step"><span class="js-stage">Aug 2012 &middot; Tanjong Rhu</span><span class="js-name">7 deals in 7 weeks</span><span class="js-detail">Focused on one area I genuinely knew, studied every transaction: $86K in 2.5 months.</span><span class="js-gain">Data beat hustle</span></div>
+              <div class="journey-step"><span class="js-stage">15 years on</span><span class="js-name">$500M+ transacted</span><span class="js-detail">One of the chiefs-in-charge of the PropNex Luxury team. Principal consultant at Stacked Homes. The same buyers I served in their late 20s are now in landed homes.</span><span class="js-gain">Full life-cycle service</span></div>
+              <div class="journey-step"><span class="js-stage">My own money</span><span class="js-name">$5M+ portfolio</span><span class="js-detail">Built with the same framework in this guide. Every recommendation is one I would make with my own money.</span><span class="js-gain">Practice what I preach</span></div>
+            </div>
+            <blockquote class="norman-quote">
+              "I know that one mistake on finances is actually very important. That's why I'm a bit more kiasi, cautious, conservative."
+              <cite>Norman Koh</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           20. FINAL CTA + FORM
+           ============================================================ -->
+      <section class="section narrow" id="get-the-guide">
+        <div class="section-title centered">
+          <p class="section-kicker">Your next step</p>
+          <h2>Get the test. Run it on the property you're already considering.</h2>
+          <p class="lead">
+            The guide, the decision matrix, and the REB Scorecard. Then send me one
+            property URL and I'll run the exit pool on it within 48 hours. Free.
+          </p>
+        </div>
+
+        <aside class="lead-form-panel standalone">
+          <p class="form-eyebrow">Free download</p>
+          <p class="form-heading">Get the guide + scorecard</p>
+          <p class="form-lead">Delivered within 60 seconds. WhatsApp is for the guide and your exit-pool run. Nothing else.</p>
+
+          <!-- LIVE FORM: posts to /api/lead (anti-bot + geo gate) → GHL webhook. Do NOT replace with a GHL iframe embed — that bypasses the bot/geo protection. -->
+          <form class="lead-form" id="lead-form-final" data-lead-form novalidate>
+            <div class="field">
+              <label for="final-first-name">First name</label>
+              <input id="final-first-name" name="first_name" type="text" autocomplete="given-name" required>
+            </div>
+            <div class="field">
+              <label for="final-email">Email</label>
+              <input id="final-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+            </div>
+            <div class="field">
+              <label for="final-phone">Phone (Singapore / Malaysia mobile)</label>
+              <input id="final-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+            </div>
+            <label class="form-consent">
+              <input type="checkbox" name="whatsapp_opt_in" value="yes" required>
+              <span>Yes, WhatsApp me the guide and my exit-pool run. No spam, no broadcast list.</span>
+            </label>
+            <div class="hp-field" aria-hidden="true">
+              <label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+            </div>
+            <div class="cf-turnstile" data-sitekey="TURNSTILE_SITEKEY" data-placeholder="TURNSTILE_SITEKEY" data-size="flexible"></div>
+            <button type="submit" class="button primary full-width">Send me the guide &rarr;</button>
+            <div class="form-error">Pop in your name, a valid email, and a Singapore or Malaysia mobile, then tick the box.</div>
+            <p class="form-fineprint">Free. No cost, no obligation. Unsubscribe anytime.</p>
+            <div class="form-fallback" hidden>
+              Something didn't go through. <a href="WHATSAPP_URL" data-placeholder="WHATSAPP_URL">Message me on WhatsApp</a> and I'll send it directly.
+            </div>
+          </form>
+        </aside>
+
+        <div class="post-form-microcopy">
+          <p>No spam. No hard sell. The numbers, then a real conversation, only if the numbers earn it.</p>
+          <p>If it's not a fit, I'll tell you. That's the whole point of the framework.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Norman Koh / PropNex Realty</p>
+      <p>CEA Registration: [CEA_NUMBER_PLACEHOLDER] / PropNex Realty Pte Ltd (L3008022J)</p>
+      <p class="disclaimer">
+        Past client outcomes depend on each buyer's situation, capital, and market timing, and are not a
+        guarantee of future returns. Property carries risk. Transaction figures referenced are drawn from
+        publicly available caveat data as tracked at the time of the relevant sessions. This page is
+        educational and not financial advice.
+      </p>
+    </footer>
+
+    <script src="/resale/form.js"></script>
+  </body>
+</html>
