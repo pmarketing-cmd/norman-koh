@@ -38,43 +38,26 @@
               Enter your details and you'll get the REB Framework PDF + REB Scorecard within 60 seconds.
             </p>
 
-            <!-- LIVE FORM: posts to /api/lead (anti-bot + geo gate) → GHL webhook. Do NOT replace with a GHL iframe embed — that bypasses the bot/geo protection. -->
-            <!-- GHL thank-you redirect should point to thank-you.html or the hosted equivalent. -->
-            <form action="thank-you.html" method="get" class="hero-form" data-lead-form novalidate>
-              <div class="field">
-                <label for="hero-first-name">First name</label>
-                <input id="hero-first-name" name="first_name" type="text" autocomplete="given-name" required>
-              </div>
-              <div class="field">
-                <label for="hero-email">Email</label>
-                <input id="hero-email" name="email" type="email" autocomplete="email" required>
-              </div>
-              <div class="field">
-                <label for="hero-phone">Phone (for the 48h REB Score on WhatsApp)</label>
-                <input id="hero-phone" name="phone" type="tel" autocomplete="tel" required>
-              </div>
-              <!-- Honeypot: hidden from humans; bots that fill it are rejected server-side. -->
-              <div class="hp-field" aria-hidden="true">
-                <label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
-              </div>
-              <!-- Cloudflare Turnstile widget. Replace TURNSTILE_SITEKEY with the real sitekey before publish. -->
-              <div class="cf-turnstile" data-sitekey="TURNSTILE_SITEKEY" data-placeholder="TURNSTILE_SITEKEY" data-size="flexible"></div>
-              <button class="button primary full-width" type="submit">Send me the framework</button>
-              <div class="form-error">Pop in your name, a valid email, and a Singapore or Malaysia mobile.</div>
-              <p class="privacy-note">
-                Delivered within 60 seconds. Unsubscribe anytime.
-              </p>
-              <!-- Lead recovery: hidden until a submit actually fails, then revealed
-                   by showFallback() in form.js. Restored 2026-09-03 — it had been
-                   removed by mistake (the "troubleshoot" link Collen meant was
-                   Cloudflare Turnstile's error state, not this). Without it a broken
-                   form is a dead end and the lead is lost. -->
-              <div class="form-fallback" hidden>
-                Something didn't go through.
-                <a href="https://wa.me/65XXXXXXXX?text=Hi%20Norman%2C%20I%20tried%20to%20download%20the%20REB%20Framework%20but%20the%20form%20didn%27t%20go%20through.%20Could%20you%20send%20it%20to%20me%20directly%3F" data-placeholder="WHATSAPP_URL">Message me on WhatsApp</a>
-                and I'll send it to you directly.
-              </div>
-            </form>
+            <!-- GHL form embed (Amplifyyy) -->
+            <iframe
+                src="https://link.amplifyyy.com/widget/form/KCtcd1sFu32GcqWP3XkM"
+                style="width:100%;height:100%;border:none;border-radius:8px"
+                id="inline-KCtcd1sFu32GcqWP3XkM"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="REB"
+                data-height="473"
+                data-layout-iframe-id="inline-KCtcd1sFu32GcqWP3XkM"
+                data-form-id="KCtcd1sFu32GcqWP3XkM"
+                data-cookie-consent="true"
+                data-cookie-consent-provider="auto"
+                title="REB"
+              ></iframe>
           </aside>
         </div>
       </section>
@@ -621,43 +604,26 @@
                 Delivered within 60 seconds. WhatsApp follow-up only if you ask for one.
               </p>
 
-              <!-- LIVE FORM: posts to /api/lead (anti-bot + geo gate) → GHL webhook. Do NOT replace with a GHL iframe embed — that bypasses the bot/geo protection. -->
-              <!-- GHL thank-you redirect should point to thank-you.html or the hosted equivalent. -->
-              <form action="thank-you.html" method="get" data-lead-form novalidate>
-                <div class="field">
-                  <label for="first-name">First name</label>
-                  <input id="first-name" name="first_name" type="text" autocomplete="given-name" required>
-                </div>
-                <div class="field">
-                  <label for="email">Email</label>
-                  <input id="email" name="email" type="email" autocomplete="email" required>
-                </div>
-                <div class="field">
-                  <label for="phone">Phone (for the 48h REB Score on WhatsApp)</label>
-                  <input id="phone" name="phone" type="tel" autocomplete="tel" required>
-                </div>
-                <!-- Honeypot: hidden from humans; bots that fill it are rejected server-side. -->
-                <div class="hp-field" aria-hidden="true">
-                  <label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
-                </div>
-                <!-- Cloudflare Turnstile widget. Replace TURNSTILE_SITEKEY with the real sitekey before publish. -->
-                <div class="cf-turnstile" data-sitekey="TURNSTILE_SITEKEY" data-placeholder="TURNSTILE_SITEKEY" data-size="flexible"></div>
-                <button class="button primary full-width" type="submit">Send me the framework</button>
-                <div class="form-error">Pop in your name, a valid email, and a Singapore or Malaysia mobile.</div>
-                <p class="privacy-note">
-                  Delivered within 60 seconds. Unsubscribe anytime.
-                </p>
-              <!-- Lead recovery: hidden until a submit actually fails, then revealed
-                   by showFallback() in form.js. Restored 2026-09-03 — it had been
-                   removed by mistake (the "troubleshoot" link Collen meant was
-                   Cloudflare Turnstile's error state, not this). Without it a broken
-                   form is a dead end and the lead is lost. -->
-              <div class="form-fallback" hidden>
-                Something didn't go through.
-                <a href="https://wa.me/65XXXXXXXX?text=Hi%20Norman%2C%20I%20tried%20to%20download%20the%20REB%20Framework%20but%20the%20form%20didn%27t%20go%20through.%20Could%20you%20send%20it%20to%20me%20directly%3F" data-placeholder="WHATSAPP_URL">Message me on WhatsApp</a>
-                and I'll send it to you directly.
-              </div>
-              </form>
+              <!-- GHL form embed (Amplifyyy) -->
+            <iframe
+                src="https://link.amplifyyy.com/widget/form/KCtcd1sFu32GcqWP3XkM"
+                style="width:100%;height:100%;border:none;border-radius:8px"
+                id="inline-KCtcd1sFu32GcqWP3XkM"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="REB"
+                data-height="473"
+                data-layout-iframe-id="inline-KCtcd1sFu32GcqWP3XkM"
+                data-form-id="KCtcd1sFu32GcqWP3XkM"
+                data-cookie-consent="true"
+                data-cookie-consent-provider="auto"
+                title="REB"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -684,6 +650,7 @@
       <a class="button primary" href="#download">Send it to me</a>
     </div>
 
-    <script src="/form.js"></script>
-  </body>
+    
+      <script src="https://link.amplifyyy.com/js/form_embed.js"></script>
+</body>
 </html>
