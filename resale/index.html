@@ -89,37 +89,26 @@
               Delivered within 60 seconds. The phone number is for your free 48h exit-pool run on WhatsApp.
             </p>
 
-            <!-- LIVE FORM: posts to /api/lead (anti-bot + geo gate) → GHL webhook. Do NOT replace with a GHL iframe embed — that bypasses the bot/geo protection. -->
-            <form class="lead-form" id="lead-form-hero" data-lead-form novalidate>
-              <div class="field">
-                <label for="hero-first-name">First name</label>
-                <input id="hero-first-name" name="first_name" type="text" autocomplete="given-name" required>
-              </div>
-              <div class="field">
-                <label for="hero-email">Email</label>
-                <input id="hero-email" name="email" type="email" autocomplete="email" inputmode="email" required>
-              </div>
-              <div class="field">
-                <label for="hero-phone">Phone (Singapore / Malaysia mobile)</label>
-                <input id="hero-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
-              </div>
-              <label class="form-consent">
-                <input type="checkbox" name="whatsapp_opt_in" value="yes" required>
-                <span>Yes, WhatsApp me the guide and my exit-pool run. No spam, no broadcast list.</span>
-              </label>
-              <!-- Honeypot: hidden from humans; bots that fill it are rejected server-side. -->
-              <div class="hp-field" aria-hidden="true">
-                <label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
-              </div>
-              <!-- Cloudflare Turnstile widget. Replace TURNSTILE_SITEKEY with the real sitekey before publish. -->
-              <div class="cf-turnstile" data-sitekey="TURNSTILE_SITEKEY" data-placeholder="TURNSTILE_SITEKEY" data-size="flexible"></div>
-              <button type="submit" class="button primary full-width">Send me the guide &rarr;</button>
-              <div class="form-error">Pop in your name, a valid email, and a Singapore or Malaysia mobile, then tick the box.</div>
-              <p class="form-fineprint">Free. No cost, no obligation. Unsubscribe anytime.</p>
-              <div class="form-fallback" hidden>
-                Something didn't go through. <a href="WHATSAPP_URL" data-placeholder="WHATSAPP_URL">Message me on WhatsApp</a> and I'll send it directly.
-              </div>
-            </form>
+            <!-- GHL form embed (Amplifyyy) -->
+            <iframe
+                src="https://link.amplifyyy.com/widget/form/YOMTR35cq1osiivYYUOe"
+                style="width:100%;height:100%;border:none;border-radius:8px"
+                id="inline-YOMTR35cq1osiivYYUOe"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Resale"
+                data-height="473"
+                data-layout-iframe-id="inline-YOMTR35cq1osiivYYUOe"
+                data-form-id="YOMTR35cq1osiivYYUOe"
+                data-cookie-consent="true"
+                data-cookie-consent-provider="auto"
+                title="Resale"
+              ></iframe>
           </aside>
         </div>
       </section>
@@ -728,35 +717,26 @@
           <p class="form-heading">Get the guide + scorecard</p>
           <p class="form-lead">Delivered within 60 seconds. WhatsApp is for the guide and your exit-pool run. Nothing else.</p>
 
-          <!-- LIVE FORM: posts to /api/lead (anti-bot + geo gate) → GHL webhook. Do NOT replace with a GHL iframe embed — that bypasses the bot/geo protection. -->
-          <form class="lead-form" id="lead-form-final" data-lead-form novalidate>
-            <div class="field">
-              <label for="final-first-name">First name</label>
-              <input id="final-first-name" name="first_name" type="text" autocomplete="given-name" required>
-            </div>
-            <div class="field">
-              <label for="final-email">Email</label>
-              <input id="final-email" name="email" type="email" autocomplete="email" inputmode="email" required>
-            </div>
-            <div class="field">
-              <label for="final-phone">Phone (Singapore / Malaysia mobile)</label>
-              <input id="final-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
-            </div>
-            <label class="form-consent">
-              <input type="checkbox" name="whatsapp_opt_in" value="yes" required>
-              <span>Yes, WhatsApp me the guide and my exit-pool run. No spam, no broadcast list.</span>
-            </label>
-            <div class="hp-field" aria-hidden="true">
-              <label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
-            </div>
-            <div class="cf-turnstile" data-sitekey="TURNSTILE_SITEKEY" data-placeholder="TURNSTILE_SITEKEY" data-size="flexible"></div>
-            <button type="submit" class="button primary full-width">Send me the guide &rarr;</button>
-            <div class="form-error">Pop in your name, a valid email, and a Singapore or Malaysia mobile, then tick the box.</div>
-            <p class="form-fineprint">Free. No cost, no obligation. Unsubscribe anytime.</p>
-            <div class="form-fallback" hidden>
-              Something didn't go through. <a href="WHATSAPP_URL" data-placeholder="WHATSAPP_URL">Message me on WhatsApp</a> and I'll send it directly.
-            </div>
-          </form>
+          <!-- GHL form embed (Amplifyyy) -->
+            <iframe
+                src="https://link.amplifyyy.com/widget/form/YOMTR35cq1osiivYYUOe"
+                style="width:100%;height:100%;border:none;border-radius:8px"
+                id="inline-YOMTR35cq1osiivYYUOe"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Resale"
+                data-height="473"
+                data-layout-iframe-id="inline-YOMTR35cq1osiivYYUOe"
+                data-form-id="YOMTR35cq1osiivYYUOe"
+                data-cookie-consent="true"
+                data-cookie-consent-provider="auto"
+                title="Resale"
+              ></iframe>
         </aside>
 
         <div class="post-form-microcopy">
@@ -777,6 +757,7 @@
       </p>
     </footer>
 
-    <script src="/resale/form.js"></script>
+    
+      <script src="https://link.amplifyyy.com/js/form_embed.js"></script>
   </body>
 </html>
